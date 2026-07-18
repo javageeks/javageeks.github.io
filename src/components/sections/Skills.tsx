@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiServer, FiCloud, FiGitMerge, FiDatabase, FiCpu } from "react-icons/fi";
+import { FiServer, FiCloud, FiGitMerge, FiDatabase, FiCpu, FiLayers } from "react-icons/fi";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { skillCategories } from "@/data/skills";
@@ -12,6 +12,7 @@ const iconMap: Record<SkillCategory["icon"], typeof FiServer> = {
   architecture: FiGitMerge,
   database: FiDatabase,
   ai: FiCpu,
+  frontend: FiLayers,
 };
 
 export function Skills() {

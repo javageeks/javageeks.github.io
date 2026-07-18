@@ -41,7 +41,7 @@ export interface SkillCategory {
   id: string;
   title: string;
   description: string;
-  icon: "backend" | "cloud" | "architecture" | "database" | "ai";
+  icon: "backend" | "cloud" | "architecture" | "database" | "ai" | "frontend";
   skills: SkillItem[];
 }
 
@@ -66,7 +66,7 @@ export interface Certification {
   id: string;
   name: string;
   issuer: string;
-  year: string;
+  year?: string;
   credentialLabel: string;
 }
 

@@ -15,25 +15,25 @@ export const socialLinks: SocialLink[] = [
   {
     id: "github",
     label: "GitHub",
-    href: "https://github.com/your-username",
+    href: "https://github.com/javageeks",
     icon: "github",
   },
   {
     id: "linkedin",
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/your-profile",
+    href: "https://www.linkedin.com/in/khajahussainshaik/",
     icon: "linkedin",
   },
   {
     id: "email",
     label: "Email",
-    href: "mailto:hello@example.com",
+    href: "mailto:hussainshaik7913@gmail.com",
     icon: "email",
   },
   {
     id: "resume",
     label: "Download Resume",
-    href: "/enterprise-brand-portal/resume.pdf",
+    href: "/ShaikKhajaHussain.pdf",
     icon: "resume",
   },
 ];

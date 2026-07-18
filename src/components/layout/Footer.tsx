@@ -17,11 +17,11 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <a href="#hero" className="font-mono text-sm font-semibold text-ink-100">
-              <span className="text-accent">&gt;</span> tech.lead
+              <span className="text-accent">&gt;</span> khaja.hussain
             </a>
             <p className="mt-3 max-w-xs text-sm text-ink-400 leading-relaxed">
-              Enterprise Technical Lead building scalable platforms with AI-enabled software
-              engineering.
+              Shaik Khaja Hussain — Enterprise Technical Lead. Enterprise Java, distributed
+              systems, and AI-enabled software engineering.
             </p>
           </div>
 
@@ -62,7 +62,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col gap-4 border-t border-base-500 pt-6 text-xs text-ink-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {year} Enterprise Technical Lead. All rights reserved.</p>
+          <p>&copy; {year} Shaik Khaja Hussain. All rights reserved.</p>
           <p className="font-mono">Built with React, TypeScript &amp; Tailwind CSS.</p>
         </div>
       </div>

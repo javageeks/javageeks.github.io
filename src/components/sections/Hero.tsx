@@ -34,7 +34,7 @@ export function Hero() {
             className="eyebrow"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-signal-green animate-blink" />
-            Available for select engagements
+            Open to Technical Lead &amp; AI Engineering roles
           </motion.span>
 
           <motion.h1
@@ -43,17 +43,28 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-5 text-4xl font-semibold leading-[1.1] tracking-tight text-ink-100 sm:text-5xl lg:text-6xl"
           >
-            Enterprise Technical Lead
+            Shaik Khaja Hussain
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.18 }}
+            className="mt-4 text-lg font-medium text-accent-soft"
+          >
+            Enterprise Technical Lead — Enterprise Java, Distributed Systems &amp; AI Engineering
+          </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-ink-400"
           >
-            Building scalable enterprise platforms with AI-enabled software engineering — nearly
-            15 years across telecom, banking, and retail.
+            Nearly 15 years leading Enterprise Java platforms, distributed systems, and cloud
+            architecture across telecom, banking, and financial services — now integrating
+            AI-enabled software engineering into enterprise delivery with Claude Code, MCP, and
+            Spring AI.
           </motion.p>
 
           <motion.div

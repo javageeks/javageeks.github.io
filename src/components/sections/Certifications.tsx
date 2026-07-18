@@ -26,7 +26,9 @@ export function Certifications() {
             </span>
             <h3 className="mt-4 text-sm font-semibold text-ink-100 leading-snug">{cert.name}</h3>
             <p className="mt-1 text-xs text-ink-400">{cert.issuer}</p>
-            <p className="mt-2 font-mono text-xs text-ink-500">{cert.year}</p>
+            <p className="mt-2 font-mono text-xs text-ink-500">
+              {cert.year ? cert.year : cert.credentialLabel}
+            </p>
           </Card>
         ))}
       </motion.div>

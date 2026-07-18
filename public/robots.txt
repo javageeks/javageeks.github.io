@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://example.github.io/enterprise-brand-portal/sitemap.xml
+Sitemap: https://javageeks.github.io/enterprise-brand-portal/sitemap.xml

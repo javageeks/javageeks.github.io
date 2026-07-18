@@ -1,40 +1,45 @@
 import type { AiCapability } from "@/types";
 
+/**
+ * Each capability below reflects work described in Shaik Khaja Hussain's resume:
+ * the internal AI Engineering Framework, the specialized agents, the MCP integrations,
+ * and the AI-assisted Transfer Your Service MVP at Verizon.
+ */
 export const aiCapabilities: AiCapability[] = [
   {
-    id: "claude-code",
-    title: "Claude Code in the delivery loop",
+    id: "framework",
+    title: "Internal AI Engineering Framework",
     description:
-      "Using Claude Code for scaffolding, refactoring, and test generation inside real enterprise codebases — with human review as the final gate on every change.",
+      "Designed and shipped an internal framework with 15+ specialized engineering agents for the Verizon Point of Contact Portal team — covering incident analysis, code review, PR generation, test-case generation, release preparation, and developer onboarding.",
   },
   {
-    id: "prompt-engineering",
-    title: "Prompt engineering as a discipline",
+    id: "claude-code",
+    title: "Claude Code in enterprise delivery",
     description:
-      "Treating prompts as versioned engineering artifacts: reviewed, tested, and iterated the same way application code is.",
+      "Integrated Claude Code into day-to-day delivery on a business-critical Verizon platform, with human review as the final gate on every change.",
   },
   {
     id: "mcp",
     title: "Model Context Protocol integration",
     description:
-      "Connecting internal tools and data sources to AI assistants through MCP servers, so AI-assisted workflows can safely act on real systems.",
+      "Connected Claude Code to internal developer tooling — GitHub and Jira — through MCP, so AI-assisted workflows operate on real enterprise systems rather than isolated prompts.",
   },
   {
-    id: "spring-ai",
-    title: "Spring AI & LangChain4j",
+    id: "specialized-agents",
+    title: "Specialized agents for the SDLC",
     description:
-      "Building LLM-integrated features directly into Java services — retrieval-augmented generation, structured outputs, and tool-calling patterns.",
+      "Built agents targeting distinct SDLC stages — story analysis, feature-flag auditing, API traceability, and status reporting — rather than a single general-purpose assistant.",
   },
   {
-    id: "productivity",
-    title: "Developer productivity, measured",
-    description:
-      "Tracking cycle time, review turnaround, and defect rates before and after introducing AI-assisted workflows to validate real impact, not just adoption.",
-  },
-  {
-    id: "knowledge-management",
+    id: "knowledge",
     title: "AI-assisted knowledge management",
     description:
-      "Using AI tooling to keep architecture decision records, runbooks, and onboarding docs current as systems evolve.",
+      "Structured engineering knowledge covering 11 business workflows for onboarding, incident analysis, and knowledge sharing across the team.",
+  },
+  {
+    id: "production-ai",
+    title: "AI in production workflows",
+    description:
+      "Contributed to the MVP of Verizon's AI-assisted Transfer Your Service initiative — auto-analyzing validation failures and system errors during complex service-transfer workflows and surfacing recommendations to customer service representatives.",
   },
 ];

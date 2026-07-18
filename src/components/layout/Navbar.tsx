@@ -23,7 +23,7 @@ export function Navbar() {
     >
       <nav className="container-shell flex h-16 items-center justify-between" aria-label="Primary">
         <a href="#hero" className="font-mono text-sm font-semibold text-ink-100 tracking-tight">
-          <span className="text-accent">&gt;</span> tech.lead
+          <span className="text-accent">&gt;</span> khaja.hussain
         </a>
 
         <ul className="hidden items-center gap-1 lg:flex">

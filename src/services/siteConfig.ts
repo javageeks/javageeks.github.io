@@ -3,10 +3,14 @@
  * referenced by components that need to build absolute links (e.g. sharing, canonical URLs).
  */
 export const siteConfig = {
-  siteName: "Enterprise Brand Portal",
-  siteUrl: "https://example.github.io/enterprise-brand-portal/",
+  ownerName: "Shaik Khaja Hussain",
+  role: "Enterprise Technical Lead",
+  location: "Hyderabad, India",
+  siteName: "Shaik Khaja Hussain — Portfolio",
+  siteUrl: "https://javageeks.github.io/enterprise-brand-portal/",
   basePath: "/enterprise-brand-portal/",
-  title: "Enterprise Technical Lead | Enterprise Java, Distributed Systems & AI Engineering",
+  title:
+    "Shaik Khaja Hussain — Enterprise Technical Lead | Enterprise Java, Distributed Systems & AI Engineering",
   description:
-    "Portfolio of an Enterprise Technical Lead with 15 years across telecom, banking and retail — specializing in Enterprise Java, distributed systems, cloud architecture, and AI-enabled software engineering.",
+    "Enterprise Technical Lead with nearly 15 years across telecom, banking, financial services, and eCommerce. Enterprise Java, distributed systems, cloud, and AI-enabled software engineering.",
 } as const;

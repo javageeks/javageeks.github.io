@@ -60,9 +60,14 @@ export function Contact() {
       <Card as="div" hoverable={false} className="mt-8 text-center">
         <p className="text-ink-300">
           Prefer email? Reach out at{" "}
-          <a href="mailto:hello@example.com" className="font-medium text-accent-soft hover:underline">
-            hello@example.com
+          <a
+            href="mailto:hussainshaik7913@gmail.com"
+            className="font-medium text-accent-soft hover:underline"
+          >
+            hussainshaik7913@gmail.com
           </a>
+          <span className="mx-2 text-ink-500">·</span>
+          <span className="text-ink-400">Based in Hyderabad, India</span>
         </p>
       </Card>
     </Section>
