@@ -12,7 +12,7 @@ if (!container) {
 
 createRoot(container).render(
   <StrictMode>
-    <BrowserRouter basename="/enterprise-brand-portal/">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </StrictMode>
