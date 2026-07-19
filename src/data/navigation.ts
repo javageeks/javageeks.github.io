@@ -33,7 +33,7 @@ export const socialLinks: SocialLink[] = [
   {
     id: "resume",
     label: "Download Resume",
-    href: "/ShaikKhajaHussain.pdf",
+    href: "/Shaik_Khaja_Hussain.pdf",
     icon: "resume",
   },
 ];

@@ -67,12 +67,6 @@ export function Navbar() {
               <FiLinkedin size={18} />
             </a>
           )}
-          <a
-            href="#contact"
-            className="rounded-lg border border-base-500 px-4 py-2 text-sm font-medium text-ink-100 hover:border-accent/50 hover:text-accent-soft transition-colors"
-          >
-            Contact
-          </a>
         </div>
 
         <button

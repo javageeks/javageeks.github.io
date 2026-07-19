@@ -29,6 +29,9 @@ export function Certifications() {
             <p className="mt-2 font-mono text-xs text-ink-500">
               {cert.year ? cert.year : cert.credentialLabel}
             </p>
+            {cert.credentialId && (
+              <p className="mt-1 font-mono text-[11px] text-ink-600">ID {cert.credentialId}</p>
+            )}
           </Card>
         ))}
       </motion.div>

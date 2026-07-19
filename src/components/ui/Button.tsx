@@ -49,6 +49,7 @@ export function Button(props: ButtonProps) {
         href={props.href}
         target={props.target}
         rel={props.rel}
+        download={props.download}
         onClick={props.onClick}
       >
         {props.icon}
