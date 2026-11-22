@@ -30,24 +30,27 @@ interface ButtonAsAnchor extends BaseProps, AnchorHTMLAttributes<HTMLAnchorEleme
 
 type ButtonProps = ButtonAsButton | ButtonAsAnchor;
 
-/** Shared call-to-action control, rendered as either a <button> or an <a>. */
+/**
+ * Shared call-to-action control, rendered as either a `<button>` or an `<a>`.
+ * The `as` prop acts as the discriminant for the union above and is stripped
+ * from the rest-spread so it never reaches the DOM as an unknown attribute.
+ */
 export function Button(props: ButtonProps) {
-  const { variant = "primary", icon, children, className = "", ...rest } = props;
+  const { variant = "primary", icon, children, className = "", as, ...rest } =
+    props as BaseProps & { as?: "a" | "button"; className?: string } & Record<string, unknown>;
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
 
-  if (props.as === "a") {
-    const { as: _as, ...anchorRest } = rest as AnchorHTMLAttributes<HTMLAnchorElement>;
+  if (as === "a") {
     return (
-      <a className={classes} {...anchorRest}>
+      <a className={classes} {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}>
         {icon}
         {children}
       </a>
     );
   }
 
-  const { as: _as, ...buttonRest } = rest as ButtonHTMLAttributes<HTMLButtonElement>;
   return (
-    <button className={classes} {...buttonRest}>
+    <button className={classes} {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}>
       {icon}
       {children}
     </button>
