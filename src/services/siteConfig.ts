@@ -1,14 +1,13 @@
 /**
- * Central site configuration — deployment URL, base path, and metadata
- * referenced by components that need to build absolute links (e.g. sharing, canonical URLs).
+ * Central site configuration — deployment URL and metadata
+ * referenced by components that need absolute links.
  */
 export const siteConfig = {
   ownerName: "Shaik Khaja Hussain",
   role: "Enterprise Technical Lead",
   location: "Hyderabad, India",
   siteName: "Shaik Khaja Hussain — Portfolio",
-  siteUrl: "https://javageeks.github.io/enterprise-brand-portal/",
-  basePath: "/enterprise-brand-portal/",
+  siteUrl: "https://javageeks.github.io/",
   title:
     "Shaik Khaja Hussain — Enterprise Technical Lead | Enterprise Java, Distributed Systems & AI Engineering",
   description:

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FiGithub, FiLinkedin, FiDownload, FiArrowDown } from "react-icons/fi";
 import { Button } from "@/components/ui/Button";
 import { socialLinks } from "@/data/navigation";
+import { useIsHydrated } from "@/hooks/useIsHydrated";
 
 const buildSteps = [
   { label: "architecture.review", status: "passed" },
@@ -14,6 +15,15 @@ export function Hero() {
   const github = socialLinks.find((l) => l.id === "github");
   const linkedin = socialLinks.find((l) => l.id === "linkedin");
   const resume = socialLinks.find((l) => l.id === "resume");
+  const hydrated = useIsHydrated();
+
+  // Only hide-then-reveal once the client has hydrated. On the server (and on
+  // the first client render that must match it) we render the final visible
+  // state so pre-rendered HTML is actually visible to crawlers / link previews.
+  const revealFrom = (fromY: number) =>
+    hydrated ? { opacity: 0, y: fromY } : { opacity: 1, y: 0 };
+  const revealFromX = (fromX: number) =>
+    hydrated ? { opacity: 0, x: fromX } : { opacity: 1, x: 0 };
 
   return (
     <section
@@ -28,7 +38,7 @@ export function Hero() {
       <div className="container-shell relative grid gap-14 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
         <div>
           <motion.span
-            initial={{ opacity: 0, y: 10 }}
+            initial={revealFrom(10)}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="eyebrow"
@@ -38,7 +48,7 @@ export function Hero() {
           </motion.span>
 
           <motion.h1
-            initial={{ opacity: 0, y: 16 }}
+            initial={revealFrom(16)}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-5 text-4xl font-semibold leading-[1.1] tracking-tight text-ink-100 sm:text-5xl lg:text-6xl"
@@ -47,7 +57,7 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 12 }}
+            initial={revealFrom(12)}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.18 }}
             className="mt-4 text-lg font-medium text-accent-soft"
@@ -56,7 +66,7 @@ export function Hero() {
           </motion.p>
 
           <motion.p
-            initial={{ opacity: 0, y: 16 }}
+            initial={revealFrom(16)}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.25 }}
             className="mt-6 max-w-xl text-lg leading-relaxed text-ink-400"
@@ -68,7 +78,7 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={revealFrom(16)}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-10 flex flex-wrap items-center gap-3"
@@ -105,26 +115,26 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Signature element: a terminal-style build console standing in for a live status readout */}
+        {/* Signature element: a decorative terminal-style panel — not a live status readout */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={revealFrom(20)}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
           className="panel overflow-hidden"
           role="img"
-          aria-label="Illustrative build console showing architecture review, distributed systems design, AI engineering integration, and delivery steps"
+          aria-label="Decorative console panel listing focus areas: architecture, distributed systems, AI engineering, and delivery"
         >
           <div className="flex items-center gap-2 border-b border-base-500 bg-base-800/60 px-4 py-3">
             <span className="h-2.5 w-2.5 rounded-full bg-[#F5665A]" />
             <span className="h-2.5 w-2.5 rounded-full bg-signal-amber" />
             <span className="h-2.5 w-2.5 rounded-full bg-signal-green" />
-            <span className="ml-3 font-mono text-xs text-ink-500">platform-build.log</span>
+            <span className="ml-3 font-mono text-xs text-ink-500">focus-areas.log &nbsp;·&nbsp; decorative</span>
           </div>
           <div className="space-y-3 px-5 py-6 font-mono text-sm">
             {buildSteps.map((step, index) => (
               <motion.div
                 key={step.label}
-                initial={{ opacity: 0, x: -8 }}
+                initial={revealFromX(-8)}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.5 + index * 0.12 }}
                 className="flex items-center justify-between"
@@ -137,13 +147,12 @@ export function Hero() {
                       : "text-signal-amber animate-blink"
                   }
                 >
-                  {step.status === "passed" ? "✓ passed" : "● running"}
+                  {step.status === "passed" ? "✓ focus" : "● current"}
                 </span>
               </motion.div>
             ))}
             <div className="mt-4 border-t border-base-500 pt-4 text-ink-500">
-              <span className="text-accent-soft">$</span> uptime --last-30d
-              <div className="mt-1 text-ink-300">99.98% availability</div>
+              <span className="text-accent-soft">#</span> an illustrative panel — not a live status
             </div>
           </div>
         </motion.div>

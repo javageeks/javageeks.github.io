@@ -2,7 +2,7 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/enterprise-brand-portal/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0A0E14" />
 
@@ -13,7 +13,7 @@
     />
     <meta name="author" content="Shaik Khaja Hussain" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://javageeks.github.io/enterprise-brand-portal/" />
+    <link rel="canonical" href="https://javageeks.github.io/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -22,8 +22,12 @@
       property="og:description"
       content="Nearly 15 years leading Enterprise Java platforms, distributed systems, and cloud architecture — now integrating AI-enabled software engineering into enterprise delivery."
     />
-    <meta property="og:url" content="https://javageeks.github.io/enterprise-brand-portal/" />
-    <meta property="og:image" content="https://javageeks.github.io/enterprise-brand-portal/og-image.png" />
+    <meta property="og:url" content="https://javageeks.github.io/" />
+    <meta property="og:image" content="https://javageeks.github.io/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Shaik Khaja Hussain — Enterprise Technical Lead" />
     <meta property="og:site_name" content="Shaik Khaja Hussain — Portfolio" />
 
     <!-- Twitter -->
@@ -33,7 +37,7 @@
       name="twitter:description"
       content="Enterprise Java, distributed systems, cloud, and AI-enabled software engineering."
     />
-    <meta name="twitter:image" content="https://javageeks.github.io/enterprise-brand-portal/og-image.png" />
+    <meta name="twitter:image" content="https://javageeks.github.io/og-image.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,6 +45,19 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- No-JS safety net: ensure the pre-rendered HTML is visible for visitors
+         and archival tools that do not execute JavaScript. Framer Motion's
+         initial-hidden variant otherwise applies opacity:0 as an inline style. -->
+    <noscript>
+      <style>
+        #root * {
+          opacity: 1 !important;
+          transform: none !important;
+          animation: none !important;
+        }
+      </style>
+    </noscript>
   </head>
   <body class="bg-base-900 text-ink-200 antialiased">
     <div id="root"></div>

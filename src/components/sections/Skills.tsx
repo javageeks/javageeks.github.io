@@ -42,19 +42,12 @@ export function Skills() {
               </div>
               <p className="mt-3 text-sm text-ink-400">{category.description}</p>
 
-              <ul className="mt-5 space-y-3">
+              <ul className="mt-5 flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <li key={skill.id}>
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-ink-300">{skill.name}</span>
-                      <span className="font-mono text-xs text-ink-500">{skill.level}%</span>
-                    </div>
-                    <div className="mt-1.5 h-1 rounded-full bg-base-600" aria-hidden="true">
-                      <div
-                        className="h-1 rounded-full bg-accent"
-                        style={{ width: `${skill.level}%` }}
-                      />
-                    </div>
+                    <span className="inline-flex items-center rounded-md border border-base-500 bg-base-700 px-2.5 py-1 font-mono text-xs text-ink-300">
+                      {skill.name}
+                    </span>
                   </li>
                 ))}
               </ul>

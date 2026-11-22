@@ -57,20 +57,26 @@ export function Projects() {
               ))}
             </div>
 
-            <div className="mt-6 flex gap-4 border-t border-base-500 pt-5">
-              {project.links.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-200 hover:text-accent-soft transition-colors"
-                >
-                  {link.label}
-                  <FiArrowUpRight size={15} />
-                </a>
-              ))}
-            </div>
+            {project.links.length > 0 ? (
+              <div className="mt-6 flex gap-4 border-t border-base-500 pt-5">
+                {project.links.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-200 hover:text-accent-soft transition-colors"
+                  >
+                    {link.label}
+                    <FiArrowUpRight size={15} />
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <div className="mt-6 border-t border-base-500 pt-5 text-xs text-ink-500">
+                Client engagement — source code not public.
+              </div>
+            )}
           </Card>
         ))}
       </motion.div>

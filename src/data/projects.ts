@@ -1,18 +1,23 @@
 import type { FeaturedProject } from "@/types";
 
+/**
+ * Only AI Engineering Framework and A1 Paints have public repositories.
+ * Client platform work (telecommunications customer servicing, banking consent processing)
+ * is described at a level that does not expose internal application names or codenames.
+ */
 export const featuredProjects: FeaturedProject[] = [
   {
     id: "ai-engineering-framework",
     name: "AI Engineering Framework",
-    tagline: "AI-assisted engineering platform for enterprise software delivery.",
+    tagline: "AI-assisted engineering workflows for enterprise software delivery.",
     description:
-      "An internal AI Engineering Framework designed for the Verizon Point of Contact Portal team, built on Claude Code, MCP integrations, reusable skills, and 15+ specialized engineering agents. Standardizes AI-assisted workflows across incident analysis, code review, PR generation, test-case generation, release preparation, developer onboarding, feature-flag auditing, status reporting, and API traceability.",
+      "An internal engineering framework built on Claude Code, Model Context Protocol, reusable skills, and a set of specialized agents. Standardizes AI-assisted workflows across incident analysis, code review, pull-request generation, test-case generation, release preparation, developer onboarding, feature-flag auditing, status reporting, and API traceability.",
     architecture: [
-      "Claude Code integrated with GitHub and Jira via Model Context Protocol.",
-      "Structured engineering knowledge covering 11 business workflows for onboarding and knowledge sharing.",
-      "Specialized AI agents targeting distinct stages of the software development lifecycle.",
+      "Claude Code integrated with source-control and issue-tracking systems via Model Context Protocol.",
+      "Structured engineering knowledge organized around business workflows for onboarding and knowledge sharing.",
+      "Specialized agents targeting distinct stages of the software development lifecycle.",
     ],
-    technologies: ["Claude Code", "MCP", "Prompt Engineering", "GitHub", "Jira"],
+    technologies: ["Claude Code", "MCP", "Prompt Engineering"],
     screenshotLabel: "AI Engineering Framework — agent architecture",
     links: [
       { label: "View on GitHub", href: "https://github.com/javageeks" },
@@ -20,39 +25,35 @@ export const featuredProjects: FeaturedProject[] = [
     featured: true,
   },
   {
-    id: "verizon-point-of-contact-portal",
-    name: "Verizon Point of Contact Portal",
-    tagline: "Enterprise approval platform used across multiple Verizon applications.",
+    id: "enterprise-approval-platform",
+    name: "Enterprise Approval Platform",
+    tagline: "Centralized approvals platform for a Fortune 100 telecommunications client.",
     description:
-      "Centralized approval platform used by B360 Account Inquiry, MyBiz, ACSS, and other Verizon systems for discount approvals, payment approvals, pricing exceptions, offers, and Terms & Conditions. Assumed full technical ownership after a complete engineering team transition and led ongoing development, production support, enhancements, and delivery with a newly formed team of 2–3 engineers.",
+      "A centralized approvals platform used by multiple enterprise applications across the client's customer-servicing estate for discount, payment, pricing-exception, offer, and terms-and-conditions approvals. Assumed full technical ownership after a complete engineering team transition with no legacy engineering support, and led ongoing development, production support, enhancements, and delivery with a newly formed team.",
     architecture: [
-      "Multi-application approval workflow layer integrating with multiple upstream Verizon applications.",
-      "Java / Spring Boot microservices exposing REST APIs to consuming enterprise systems.",
-      "AWS-based deployment with CloudWatch observability.",
+      "Approval workflow layer integrating with multiple upstream enterprise applications.",
+      "Java and Spring Boot microservices exposing REST APIs to consuming systems.",
+      "Cloud deployment with centralized logging and metrics for production operations.",
     ],
-    technologies: ["Java", "Spring Boot", "REST APIs", "AWS", "CloudWatch"],
-    screenshotLabel: "Point of Contact Portal — approval workflow overview",
-    links: [
-      { label: "View on GitHub", href: "https://github.com/javageeks" },
-    ],
+    technologies: ["Java", "Spring Boot", "REST APIs", "Cloud", "Observability"],
+    screenshotLabel: "Enterprise approval workflow — high-level overview",
+    links: [],
     featured: true,
   },
   {
-    id: "wells-fargo-consent-engine",
-    name: "Wells Fargo Consent Engine",
-    tagline: "Consent rationalization and marketing compliance platform.",
+    id: "consent-platform",
+    name: "Consent Platform",
+    tagline: "Customer consent rationalization and marketing compliance for a global bank.",
     description:
-      "Backend platform responsible for customer consent rationalization and marketing compliance at Wells Fargo. Led the Capgemini engineering team of four consultants delivering Spring Boot microservices, Kafka integrations, and MongoDB persistence services, deployed on Pivotal Cloud Foundry. Established the project from inception, including project structure, engineering standards, and delivery processes.",
+      "Backend platform responsible for customer consent rationalization and marketing compliance at a leading global financial institution. Led the engineering team of four consultants delivering Spring Boot microservices, event-driven integrations on Kafka, and MongoDB persistence services, deployed on an enterprise cloud platform. Established the project from inception, including project structure, engineering standards, and delivery processes.",
     architecture: [
       "Event-driven consent processing built on Spring Boot microservices and Kafka.",
       "MongoDB persistence for consent state.",
-      "REST APIs integrating consent services with upstream marketing and compliance systems, deployed on PCF.",
+      "REST APIs integrating consent services with upstream marketing and compliance systems, deployed on enterprise cloud infrastructure.",
     ],
-    technologies: ["Java", "Spring Boot", "Kafka", "MongoDB", "PCF", "REST APIs"],
-    screenshotLabel: "Consent Engine — event-driven processing pipeline",
-    links: [
-      { label: "View on GitHub", href: "https://github.com/javageeks" },
-    ],
+    technologies: ["Java", "Spring Boot", "Kafka", "MongoDB", "Enterprise Cloud", "REST APIs"],
+    screenshotLabel: "Consent platform — event-driven processing pipeline",
+    links: [],
     featured: true,
   },
   {

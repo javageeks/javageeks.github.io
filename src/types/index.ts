@@ -68,7 +68,6 @@ export interface Certification {
   issuer: string;
   year?: string;
   credentialLabel: string;
-  credentialId?: string;
 }
 
 export interface StatItem {
