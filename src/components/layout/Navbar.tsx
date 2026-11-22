@@ -32,7 +32,7 @@ export function Navbar() {
               <a
                 href={item.href}
                 aria-current={activeId === item.id ? "true" : undefined}
-                className={`rounded-md px-3 py-2 text-sm transition-colors ${
+                className={`whitespace-nowrap rounded-md px-3 py-2 text-sm transition-colors ${
                   activeId === item.id
                     ? "text-ink-100 bg-base-700"
                     : "text-ink-400 hover:text-ink-100 hover:bg-base-700/60"
@@ -44,7 +44,9 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        {/* Right rail: social icons only — the Contact nav item already
+            handles the "contact me" affordance; a second button was redundant. */}
+        <div className="hidden items-center gap-4 lg:flex">
           {github && (
             <a
               href={github.href}
@@ -67,12 +69,6 @@ export function Navbar() {
               <FiLinkedin size={18} />
             </a>
           )}
-          <a
-            href="#contact"
-            className="rounded-lg border border-base-500 px-4 py-2 text-sm font-medium text-ink-100 hover:border-accent/50 hover:text-accent-soft transition-colors"
-          >
-            Contact
-          </a>
         </div>
 
         <button
