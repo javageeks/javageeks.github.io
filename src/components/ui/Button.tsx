@@ -20,11 +20,18 @@ const variantClasses: Record<Variant, string> = {
 const baseClasses =
   "inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none";
 
-interface ButtonAsButton extends BaseProps, ButtonHTMLAttributes<HTMLButtonElement> {
+// Omit `children` from the HTML attribute types so it doesn't collide with
+// BaseProps' required `children: ReactNode` (the HTML-attribute version is
+// optional, which TypeScript rejects as a non-identical property).
+interface ButtonAsButton
+  extends BaseProps,
+    Omit<ButtonHTMLAttributes<HTMLButtonElement>, "children"> {
   as?: "button";
 }
 
-interface ButtonAsAnchor extends BaseProps, AnchorHTMLAttributes<HTMLAnchorElement> {
+interface ButtonAsAnchor
+  extends BaseProps,
+    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "children"> {
   as: "a";
 }
 
